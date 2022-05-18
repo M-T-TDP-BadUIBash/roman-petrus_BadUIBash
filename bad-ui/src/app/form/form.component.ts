@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  public changeText: boolean = false;
 
-  constructor() { }
+
+  constructor() { 
+   
+  }
 
   ngOnInit(): void {
   }
