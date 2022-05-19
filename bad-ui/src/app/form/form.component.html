@@ -1,18 +1,18 @@
 <form id="resume-box" action="Submission.html">
     <div id="resume-title">
         <h1>
-            Submit Your Resum&eacute;
+            <b> Submit Your Resum&eacute; to EXCELLERENT UI CORP.</b>
         </h1>
     </div>
     <div id="resume-inputs">
         <div id="resume-name">
             <br />
             <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" onkeydown="return false" />
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
+            <input readonly required type="text" id="first-name" name="first-name" />
+            <button (mouseover)="changeText=true" (mouseout)="changeText=false" style="margin-left: 300px"> Hover for input healp:
                 <div *ngIf='changeText'>
                     <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
+                                alt="image"/></span></a>
                 </div>
             </button>
             <br />
@@ -22,15 +22,9 @@
             <button (click)="addChAr(firstnamevalue, 'first-name')" type="button">add character</button>
             <br />
             <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" onkeydown="return false"/>
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <input readonly required type="text" id="last-name" name="last-name" />
             <br />
-            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="117.58" step="1.2" min="0" max="200"
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="67.58" step="1" min="0" max="200"
                 aria-label="units" [(ngModel)]="laSTnamevalue" name="last-name-slider"></mat-slider>
             <button (click)="addChAr(laSTnamevalue, 'last-name')" type="button">add character lname</button>
             <br />
@@ -38,73 +32,68 @@
         <div id="resume-dob">
             <br />
             <br />
-            <label for="date">Date of Birth:</label>
-            <input id="date" />
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <label for="date">Date of Birth (YYYY/MM/DD):</label>
+            <input readonly required id="date" />
             <br />
-            <mat-slider class="longboi" thumbLabel [displayWith]="formatLabel" tickInterval="1" step="1" min="10101900" max="10000000000"
-                aria-label="units" [(ngModel)]="dateVal" name="date-name-slider"></mat-slider>
-            <button (click)="addDate(dateVal, 'date')" type="button">add character lname</button>
+            <mat-slider thumbLabel tickInterval="1" step="1" min="19000000" max="20040000"
+                aria-label="units" [(ngModel)]="dateVal" name="date-name-slider" style="margin-left: 25px; width: 550px;"></mat-slider>
+            <button (click)="addDate(dateVal, 'date')" type="button">set dOb</button>
             <br />
         </div>
         <div id="resume-email">
             <br />
             <br />
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <input readonly required type="email" id="email" name="email" />
+            <br />
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="67.58" step="1" min="0" max="200"
+                aria-label="units" [(ngModel)]="EMAIL_VAL" name="email-slider"></mat-slider>
+            <button (click)="addChAr(EMAIL_VAL, 'email')" type="button">add char</button>
+            <br />
         </div>
         <div id="resume-phone">
             <br />
             <br />
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" value="111-222-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <input readonly required type="tel" id="phone" name="phone" value=""/>
+            <br />
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="67.58" step="1" min="0" max="200"
+                aria-label="units" [(ngModel)]="phon" name="phone-slider"></mat-slider>
+            <button (click)="addChAr(phon, 'phone')" type="button">add char</button>
+            <br />
         </div>
+            <!-- <h1><b>YOU"VE BEEN REPORTED TO THE CYBER POLICE!</b></h1> -->
+            <img style="display: none;" id="cyberpolicealert" src="../../assets/POPO.gif" />
+     
+
         <div id="resume-address">
             <br />
             <br />
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" />
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <input readonly required type="text" id="address" name="address" />
+            <br />
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="67.58" step="1" min="0" max="200"
+                aria-label="units" [(ngModel)]="home" name="email-slider"></mat-slider>
+            <button (click)="addChAr(home, 'address')" type="button">add char</button>
+            <br />
         </div>
         <div id="resume-description">
             <br />
             <br />
             <label for="description">Why should we consider you for this position?</label>
             <br />
-            <textarea id="description" name="description" cols="50" rows="15" maxlength="500"></textarea>
-            <button (mouseover)="changeText=true" (mouseout)="changeText=false"> Hover for input healp:
-                <div *ngIf='changeText'>
-                    <a href="#">Help Table<span><img src="../../assets/1600px-ASCII-Table-wide.svg.png"
-                                alt="image" /></span></a>
-                </div>
-            </button>
+            <textarea readonly id="description" name="description" cols="50" rows="15" maxlength="500" ></textarea>
         </div>
+        <br />
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="67.58" step="1" min="0" max="200"
+                aria-label="characters" [(ngModel)]="WHY" name="whyareyougood"></mat-slider>
+            <button (click)="addChAr(WHY, 'description')" type="button">add char</button>
+            <br />
+        <!-- todo: add in check to look for special characters, if so, report the m to cyuber police for code injection and hack -->
         <div id="resume-submit">
             <br />
             <br />
-            <input id="submit" type="submit" value="Submit" />
+            <input (click)="onSubmit()" id="submit" type="submit" value="Submit" />
         </div>
     </div>
 </form>
